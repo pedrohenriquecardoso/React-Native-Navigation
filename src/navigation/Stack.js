@@ -24,7 +24,13 @@ export default props => {
                     </StackStep>
                 )}
             </Stack.Screen>
-            <Stack.Screen name='ViewC' component={ViewC} />
+            <Stack.Screen name='ViewC'>
+                {props => (
+                    <StackStep {...props} advance='ViewC' goBack>
+                        <ViewC />
+                    </StackStep>
+                )}
+            </Stack.Screen>
         </Stack.Navigator>
     )
 }
