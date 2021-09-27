@@ -10,7 +10,18 @@ export default props => {
                     : false
                 }
                 {props.advance
-                    ? <Button title='Advance' onPress={()=>{props.navigation.push(props.advance)}} />
+                    ?   <Button 
+                            title='Advance' 
+                            onPress={()=>{
+                                props.navigation.push(
+                                    props.advance, 
+                                    {
+                                        numero: parseInt(Math.random() * 100)
+                                    }
+                                )}
+                            } 
+                    
+                        />
                     : false
                 }
             </View>
