@@ -13,11 +13,9 @@ export default props => {
                     ?   <Button 
                             title='Advance' 
                             onPress={()=>{
-                                props.navigation.push(
+                                props.navigation.navigate(
                                     props.advance, 
-                                    {
-                                        numero: parseInt(Math.random() * 100)
-                                    }
+                                    props.advanceParam
                                 )}
                             } 
                     
