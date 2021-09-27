@@ -19,7 +19,7 @@ export default props => {
             </Stack.Screen>
             <Stack.Screen name='ViewB'>
                 {props => (
-                    <StackStep {...props} advance='ViewC' goBack>
+                    <StackStep {...props} advance='ViewC' goBack advanceParam={{ numero: 1007 }}>
                         <ViewB />
                     </StackStep>
                 )}
